@@ -654,7 +654,7 @@ declare -ft enable_set_shell_label
 #      END  { for (i=NR;i>0;i--)
 #             print line[i] }' listlogs
 
-j (){
+aj (){
         : ${1? usage: j dir-beginning}
         # go in ring buffer starting from current index.  cd to first matching dir
         for (( i=(aj_idx-1)%aj_max;   i != aj_idx%aj_max;  i=(--i+aj_max)%aj_max )) ; do
